@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-class PlayerTest {
+public class PlayerTest {
     @Test
     void testPlayerToString() {
 // 1. (Arrange) 準備: テスト用のプレイヤーを作成
