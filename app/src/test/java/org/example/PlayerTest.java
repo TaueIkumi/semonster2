@@ -21,10 +21,10 @@ public class PlayerTest {
         String expectedOutput =
                 "Deck:user\n" +
                 "ゴブリン:レア度[0]\n" +
-                "ベヒーモス:レア度[4]\n" +
-                "フェニックス:レア度[6]\n" +
+                "スーパーオーク:レア度[4]\n" +
+                "スーパーリザードマン:レア度[6]\n" +
                 "オーク:レア度[1]\n" +
-                "グリフィン:レア度[3]\n";
+                "スーパーグリフィン:レア度[3]\n";
 
         assertEquals(expectedOutput, actualOutput);
     }
