@@ -9,7 +9,8 @@ public class Monster {
 
   // ここを新しいモンスター名に変更しました
   private static final String[] MONSTER_NAMES = {
-    "ゴブリン", "オーク", "リザードマン", "グリフィン", "ベヒーモス"
+    "ゴブリン", "オーク", "リザードマン", "グリフィン", "ベヒーモス",
+    "ドラゴン", "フェニックス", "ユニコーン", 
   };
 
   public Monster(String name, int rare) {
