@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class PlayerTest {
     @Test
-    void testPlayerToString() {
+    public void testPlayerToString() {
 // 1. (Arrange) 準備: テスト用のプレイヤーを作成
         // レア度 0, 4, 0, 6, 1 のモンスターを持つ "user" という名前のプレイヤー
         List<Integer> rarities = List.of(0, 4, 6, 1, 3);
