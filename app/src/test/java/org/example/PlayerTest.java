@@ -24,7 +24,7 @@ public class PlayerTest {
                 "ベヒーモス:レア度[4]\n" +
                 "フェニックス:レア度[6]\n" +
                 "オーク:レア度[1]\n" +
-                "リザードマン:レア度[3]\n";
+                "グリフィン:レア度[3]\n";
 
         assertEquals(expectedOutput, actualOutput);
     }
