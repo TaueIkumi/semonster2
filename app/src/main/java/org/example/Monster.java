@@ -52,6 +52,15 @@ public class Monster {
     System.out.println(this.name + "のMPが " + amount + " 回復した！ 現在MP: " + this.mp + "/" + this.maxMp);
   }
 
+  public void takeDamage(int amount) {
+    this.hp -= amount;
+    System.out.println(this.name + "は " + amount + " のダメージを受けた！ 現在HP: " + this.hp + "/" + this.maxHp);
+    if (this.hp <= 0) {
+      this.hp = 0;
+      System.out.println(this.name + "は倒れた！");
+    }
+  }
+
   @Override
   public String toString() {
     return name + ":レア度[" + rare + "] HP:" + hp + " MP:" + mp;
