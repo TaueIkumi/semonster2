@@ -21,7 +21,20 @@ public class App {
     // 2. プレイヤーを生成する (名前:"Taro", デッキは上記リストの内容)
     Player player1 = new Player("Taro", rarities);
 
+    Item hpPotion = new Item("HPポーション", 50, 0);
+    Item mpPotion = new Item("MPポーション", 0, 30);
+    player1.addItem(hpPotion);
+    player1.addItem(mpPotion);
+
     // 3. プレイヤーの情報を表示する (PlayerクラスのtoString()が呼ばれる)
+    System.out.println(player1);
+
+    Monster target = player1.getMonsterDeck().get(0);
+
+    target.takeDamage(60);
+
+    player1.useItem(0, target);
+
     System.out.println(player1);
 
   }
