@@ -6,7 +6,9 @@ public class Monster {
   private String name;
   private int rare;
   private int hp;
+  private int maxHp;
   private int mp;
+  private int maxMp;
 
   // ここを新しいモンスター名に変更しました
   private static final String[] MONSTER_NAMES = {
@@ -22,8 +24,10 @@ public class Monster {
     }
     this.rare = rare;
 
-    this.hp = 100 + (rare * 20);
-    this.mp = 50 + (rare * 10);
+    this.maxHp = 100 + (rare * 20);
+    this.hp = this.maxHp;
+    this.maxMp = 50 + (rare * 10);
+    this.mp = this.maxMp;
   }
 
   public int getHp() {
@@ -32,6 +36,20 @@ public class Monster {
 
   public int getMp() {
     return mp;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void recoverHp(int amount) {
+    this.hp = Math.min(this.hp + amount, this.maxHp);
+    System.out.println(this.name + "のHPが " + amount + " 回復した！ 現在HP: " + this.hp + "/" + this.maxHp);
+  }
+
+  public void recoverMp(int amount) {
+    this.mp = Math.min(this.mp + amount, this.maxMp);
+    System.out.println(this.name + "のMPが " + amount + " 回復した！ 現在MP: " + this.mp + "/" + this.maxMp);
   }
 
   @Override
