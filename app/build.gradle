@@ -40,7 +40,7 @@ application {
     mainClass = 'org.example.App'
 }
 
-task runPlayerTest(type: JavaExec) {
+task runPlayerDemo(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
     mainClass = 'org.example.TestPlayer'
 }
