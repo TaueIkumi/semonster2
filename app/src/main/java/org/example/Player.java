@@ -63,29 +63,50 @@ public class Player {
     System.out.println(itemToUse.getName() + " はなくなった。");
   }
 
-  /**
-   * プレイヤーのモンスターデッキを取得する
-   *
-   * @return モンスターデッキのリスト
-   */
   public ArrayList<Monster> getMonsterDeck() {
     return monsterDeck;
   }
 
-  /**
-   * プレイヤーの所持アイテムを取得する
-   *
-   * @return 所持アイテムのリスト
-   */
   public ArrayList<Item> getItems() {
     return items;
   }
 
-  /**
-   * プレイヤーのデッキ情報と所持アイテム情報を指定されたフォーマットの文字列で返す
-   *
-   * @return Deck:プレイヤー名 と各モンスターの情報、および所持アイテムの情報 を改行でつないだ文字列
-   */
+  public void monsterNormalAttack(int attackerIndex, Monster target) {
+    if (attackerIndex < 0 || attackerIndex >= monsterDeck.size()) {
+      System.out.println("指定されたモンスターは存在しません。");
+      return;
+    }
+    
+    Monster attacker = monsterDeck.get(attackerIndex);
+    System.out.println(this.name + "の" + attacker.getName() + "が攻撃！");
+    attacker.normalAttack(target);
+  }
+
+
+  public void monsterPowerAttack(int attackerIndex, Monster target) {
+    if (attackerIndex < 0 || attackerIndex >= monsterDeck.size()) {
+      System.out.println("指定されたモンスターは存在しません。");
+      return;
+    }
+    
+    Monster attacker = monsterDeck.get(attackerIndex);
+    System.out.println(this.name + "の" + attacker.getName() + "が強攻撃を使用！");
+    attacker.powerAttack(target);
+  }
+
+
+  public void monsterSpecialAttack(int attackerIndex, Monster target) {
+    if (attackerIndex < 0 || attackerIndex >= monsterDeck.size()) {
+      System.out.println("指定されたモンスターは存在しません。");
+      return;
+    }
+    
+    Monster attacker = monsterDeck.get(attackerIndex);
+    System.out.println(this.name + "の" + attacker.getName() + "が必殺技を使用！");
+    attacker.specialAttack(target);
+  }
+
+
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();

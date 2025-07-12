@@ -37,5 +37,29 @@ public class App {
 
     System.out.println(player1);
 
+    System.out.println("\n=== スキル攻撃のテスト ===");
+    
+    List<Integer> rarities2 = List.of(2, 1, 3, 0, 4);
+    Player player2 = new Player("Jiro", rarities2);
+    
+    System.out.println("プレイヤー1のモンスター:");
+    System.out.println(player1.getMonsterDeck().get(0));
+    System.out.println("プレイヤー2のモンスター:");
+    System.out.println(player2.getMonsterDeck().get(0));
+    
+    System.out.println("\n--- バトル開始 ---");
+    
+    player1.monsterNormalAttack(0, player2.getMonsterDeck().get(0));
+    
+    player2.monsterPowerAttack(0, player1.getMonsterDeck().get(0));
+    
+    player1.monsterSpecialAttack(0, player2.getMonsterDeck().get(0));
+    
+    System.out.println("\n--- バトル後の状態 ---");
+    System.out.println("プレイヤー1のモンスター:");
+    System.out.println(player1.getMonsterDeck().get(0));
+    System.out.println("プレイヤー2のモンスター:");
+    System.out.println(player2.getMonsterDeck().get(0));
+
   }
 }
